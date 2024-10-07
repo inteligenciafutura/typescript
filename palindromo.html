@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function esPalindromo(cadena) {
+  // Convertir la cadena a minúsculas y eliminar espacios y caracteres no alfanuméricos
+  const cadenaProcesada = cadena.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+  // Invertir la cadena procesada
+  const cadenaInvertida = cadenaProcesada.split('').reverse().join('');
+
+  // Comparar ambas cadenas
+  return cadenaProcesada === cadenaInvertida;
+}
+
+// Ejemplos de uso:
+console.log(esPalindromo("anita lava la tina"));  // Imprime: true
+console.log(esPalindromo("Hola mundo"));         // Imprime: false
+    </script>
+</body>
+</html>
